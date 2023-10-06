@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jogo de Adivinhação de Palavras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 50px;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+            color: #555;
+            font-size: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 5%;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #428bca;
+            color: #fff;
+        }   
+
+        button.correct {
+            background-color: #5cb85c;
+        }
+
+        button.incorrect {
+            background-color: #d9534f;
+        }
+
+        button.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        button:hover {
+            background-color: #357ebd;
+        }
+        button:last-of-type {
+        font-size: 30px;
+        padding: 12px 24px;
+        margin-left: 70px;
+        background-color: #d9534f;
+
+        }
+
+        #resultado {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #enigma {
+            font-style: italic;
+            color: #777;
+            font-size: 30px;
+            margin-top: 9%;
+        }
+
+        #vidas {
+            font-size: 25px;
+            color: RED;
+            margin-top: 4%;
+        }
+
+        #game-over {
+            font-size: 100px;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo dos ENIGMAS</h1>
+    <p>Eu estou pensando em um animal. Tente adivinhar qual é:</p>
+    <p id="enigma"></p>
+    <div class="button-container">
+        <button onclick="verificarPalpite('gato')">Gato</button>
+        <button onclick="verificarPalpite('cachorro')">Cachorro</button>
+        <button onclick="verificarPalpite('elefante')">Elefante</button>
+        <button onclick="verificarPalpite('tigre')">Tigre</button>
+        <button onclick="window.location.reload();">Reiniciar</button>
+
+    </div>
+    <p id="resultado"></p>
+    <p id="vidas">Vidas: 2</p>
+    <p id="game-over" style="display: none;">Game Over!</p>
+
+    <script>
+        const palavras = ['gato', 'cachorro', 'elefante', 'tigre']
+        let palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)]
+        let vidas = 2
+
+        const enigmas = {
+            'gato': 'Eu sou um animal que tem uma visão noturna incrível, sou capaz de enxergar no escuro e detectar movimentos que outros animais não conseguem perceber. Minha audição aguçada me permite ouvir sons que estão muito longe e também aqueles que estão muito próximos',
+            'cachorro': 'Sou um animal de quatro patas, leal e protetor, com um faro aguçado e um instinto caçador minha inteligência é notável e versátil.',
+            'elefante': 'O que é um animal que tem uma força que pode derrubar árvores, mas é gentil o suficiente para pegar uma única folha sem rasgá-la?',
+            'tigre': 'Sou um felino selvagem, rápido e furtivo com manchas na pelagem, um caçador ativo minha agilidade é impressionante e letal e minha presa não tem chance de escapar do meu arsenal. '
+            
+        }
+
+        
+        document.getElementById("enigma").innerHTML = enigmas[palavraAleatoria]
+
+        function verificarPalpite(palpite) {
+            if (palpite === palavraAleatoria) {
+                document.getElementById("resultado").innerHTML = "Parabéns! Você acertou!"
+                document.getElementById("resultado").classList.add("correct")
+                desativarBotoes()
+            } else {
+                document.getElementById("resultado").innerHTML = "Tente novamente."
+                document.getElementById("resultado").classList.remove("correct")
+                vidas--
+                document.getElementById("vidas").innerHTML = `Vidas: ${vidas}`
+                if (vidas === 0) {
+                    gameOver()
+                }
+            }
+        }
+
+        function desativarBotoes() {
+            const botoes = document.querySelectorAll(".button-container button")
+            for (const botao of botoes) {
+                botao.classList.add("disabled")
+                botao.disabled = true
+            }
+        }
+
+        function gameOver() {
+            document.getElementById("game-over").style.display = "block"
+            const reiniciarBotao = document.querySelectorAll(".button-container button")[5]
+            reiniciarBotao.addEventListener("click", function() {
+                window.location.reload()
+            })
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+h1 {
+    text-align: center;
+}
+form {
+    margin-left: 43%
+}
+#resultado {
+    text-align: center;
+    font-size: 28px;
+}

@@ -1,0 +1,257 @@
+ /* styles.css MENU*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  nav {
+    text-align: center;
+    padding: 10rem 0;
+    height: 529px;
+  }
+  
+  .menu-box {
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 800px;
+    margin-bottom: 10rem;
+  }
+  
+  .menu-header {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #333;
+    margin: 2%;
+  }
+  .menu-cadastro {
+    width: 40%;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 1.5rem 0; /* Ajustamos a margem vertical dos botões */
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+  /* Estilo para o botão "Sair" */
+  nav .btn-sair {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+    background-color: #ff0000;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  nav .btn-sair:hover {
+    background-color: #c60000;
+    transform: scale(1.1);
+  }
+  
+  /* Estilo para os outros botões */
+  nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: #0000ff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border: 3px solid #0000ff;
+    border-radius: 15px;
+    width: 40%;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    background-color: #0000ff99;
+    transform: scale(1.1);
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  } 
+/* styles.css CADASTRO*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+.formobile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+   width: 50%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.inicio {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 80%;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .formobile{
+      flex-direction: column;
+  }
+  .form {
+    width: 100%;
+  }
+}
+/* styles.css ACESSO*/
+.acesso {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: #f0f0f0;
+    display: flex;
+    margin-top: 10%;
+  }
+  
+  .login-container {
+    background-color: white;
+    padding: 70px;
+    border-radius: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 100px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+  }
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .entrar {
+    padding: 10px;
+    width: 50%;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 25%;
+    margin-top: 20px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+/* styles.css LOGOFF*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 60%;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #666;
+}
+.menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.menu:hover {
+    background-color: #0056b3;
+}
