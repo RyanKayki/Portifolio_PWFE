@@ -10,3 +10,4 @@ function fecharImagemAmpliada() {
     var imagemAmpliadaOverlay = document.getElementById('imagem-ampliada-overlay');
     imagemAmpliadaOverlay.style.display = 'none';
 }
+

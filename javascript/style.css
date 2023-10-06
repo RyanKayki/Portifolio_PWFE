@@ -7,8 +7,11 @@
 }
 body {
     font-family: 'Segoe UI';
-}
+    background-image: url(imagens/rtxcaixa.jpg);
+    background-size: 1400px;
+    background-repeat: no-repeat;
 
+}
 aside {
     width: 15%;
     min-height: 100%;
